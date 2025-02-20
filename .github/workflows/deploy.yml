@@ -1,5 +1,7 @@
 name: Deploy pages
-on: push
+on: 
+  push:
+    branches: [main]
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -7,8 +9,8 @@ jobs:
       run:
         working-directory: ./slides
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
       - name: Install dependencies
@@ -16,7 +18,7 @@ jobs:
       - name: Build
         run: npm run build -- --base /frontend-tdd/
       - name: Deploy pages
-        uses: crazy-max/ghaction-github-pages@v2
+        uses: crazy-max/ghaction-github-pages@v4
         with:
           build_dir: ./slides/dist
         env:
