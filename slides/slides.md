@@ -36,7 +36,7 @@ transition: slide-up
 # Why Accessibility?
 
 * European Accessibility Act (2019)
-* 🇩🇪 BFSG (2026)
+* 🇩🇪 BFSG (June 2025)
 * ~ 15% people have some kind of disabilities
 * demographic change
 * inclusion
@@ -49,6 +49,7 @@ transition: slide-up
 * **Meaningful** <span v-mark.orange>Alternative Text</span>
 * Color & contrast
 * Keyboard Navigation
+* Responsive Design
 * ...
 
 ---
@@ -127,8 +128,8 @@ transition: slide-up
 <v-clicks>
 
 - test components as the user experiences them
-- one of the most popular frontend libs
-- available for most SPA technologies
+- one of the most popular frontend (testing) libs
+- available for most ui frameworks
 - component testing in JSDOM
 - inspiration for E2E testing with Playwright
 
