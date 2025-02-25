@@ -7,18 +7,20 @@ layout: two-cols
 - 💻 Software Crafter
 - 🌍 Full Stack Dev
 - 🧐 CI/CD Pipeline Monitoring Specialist
-- <devicon-haskell/> Nerd and Haskell Fanboy
+- <devicon-haskell aria-label="Haskell"/> Nerd and Haskell Fanboy
 
 <div class="absolute bottom-3">
 
-  - <mdi-linkedin/> [chris-welcz-823603274](https://www.linkedin.com/in/chris-welcz-823603274/)
-  - <mdi-github/> [enolive](https://github.com/enolive)
+## Contact
+
+  - <mdi-linkedin aria-label="LinkedIn"/> [chris-welcz-823603274](https://www.linkedin.com/in/chris-welcz-823603274/)
+  - <mdi-github aria-label="GitHub"/> [enolive](https://github.com/enolive)
   
 </div>
 
 ::right::
 
-![Photography Chris CC](/chris-cc-photo.jpg){width=80%}
+![Photography of Chris CC](/chris-cc-photo.jpg){width=80%}
 
 <style>
   ul {

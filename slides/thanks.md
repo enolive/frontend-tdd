@@ -13,8 +13,8 @@ class: text-center
 
 <span class="mt-10">
 
-<mdi-linkedin/> [chris-welcz-823603274](https://www.linkedin.com/in/chris-welcz-823603274/) |
-<mdi-github/> [enolive](https://github.com/enolive)
+<mdi-linkedin aria-label="LinkedIn"/> [chris-welcz-823603274](https://www.linkedin.com/in/chris-welcz-823603274/) |
+<mdi-github aria-label="GitHub"/> [enolive](https://github.com/enolive)
 
 </span>
 
