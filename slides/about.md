@@ -9,14 +9,18 @@ layout: two-cols
 - 🧐 CI/CD Pipeline Monitoring Specialist
 - <devicon-haskell aria-label="Haskell"/> Nerd and Haskell Fanboy
 
-<div class="absolute bottom-3">
-
-## Contact
-
-  - <mdi-linkedin aria-label="LinkedIn"/> [chris-welcz-823603274](https://www.linkedin.com/in/chris-welcz-823603274/)
-  - <mdi-github aria-label="GitHub"/> [enolive](https://github.com/enolive)
-  
-</div>
+<ul class="absolute bottom-3" aria-label="Contact">
+  <li>
+    <mdi-linkedin/>&nbsp; 
+    <a href="https://www.linkedin.com/in/chris-welcz-823603274/" aria-label="LinkedIn profile">
+      Chris Welcz
+    </a>
+  </li>
+  <li>
+    <mdi-github/>&nbsp; 
+    <a href="https://github.com/enolive" aria-label="GitHub Profile">enolive</a>
+  </li>
+</ul>
 
 ::right::
 
