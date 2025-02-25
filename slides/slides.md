@@ -67,7 +67,12 @@ class: text-2xl
 You can turn on a full-page accessibility tree in chromium based browsers
 
 ![Go to the Dev Tools -> Elements -> Accessibilty. Activate the option for the full-page accessibility tree. After a reload you should see an option to toggle between the default DOM view and the accessibility tree represented by a human icon in the right top corner.](/chrome-a11y-tree.png)
-{width=500px}
+
+<style>
+  img {
+    width: 500px;
+  }
+</style>
 
 ---
 layout: two-cols-header
@@ -232,7 +237,8 @@ class: text-3xl fade
   :enter="{ x: 0, y: 0 }"
 >
 
-![Picture showing a guy with his dog with their faces swapped as a humorous take on just changing a few things in your CSS styles and seeing everything crumbling](/css-fail.png){width=350px}
+![Picture showing a guy with his dog with their faces swapped as a humorous take on just changing a few things in your CSS styles and seeing everything crumbling](/css-fail.png)
+{width=350px}
 
 </div>
 
