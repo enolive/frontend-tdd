@@ -159,12 +159,12 @@ class: text-3xl fade
 
 # Example
 
-```tsx
+```tsx{all|4,5,7-}
 import {render, screen} from '@testing-library/react'
 import App from './App'
 
 describe('Todo App', () => {
-    it('shows header', () => {
+    it('displays header', () => {
         render(<App/>)
 
         const header = screen.getByRole('heading', {level: 1})
