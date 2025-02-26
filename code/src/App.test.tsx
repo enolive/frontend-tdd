@@ -41,11 +41,13 @@ describe('Todo App', () => {
     expect(todoItems[2]).not.toHaveClass('done')
   })
 
-  it('shows no list if there are no todos', async () => {
+  it('shows no list if there are no todos', () => {
     renderComponent()
 
     const list = screen.queryByRole('list')
     expect(list).not.toBeInTheDocument()
+    const status = screen.getByRole('status')
+    expect(status).toHaveTextContent('No Todos available')
   })
 
   it('shows a newly created todo', async () => {

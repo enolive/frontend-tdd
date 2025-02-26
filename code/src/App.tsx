@@ -7,7 +7,7 @@ function App() {
   const input = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
-    getAllTodos().then(setAllTodos)
+    void getAllTodos().then(setAllTodos)
   }, [])
 
   async function onCreate() {
@@ -38,6 +38,7 @@ function App() {
           ))}
         </ul>
       )}
+      {allTodos.length === 0 && <div role="status">No Todos available</div>}
     </>
   )
 }
