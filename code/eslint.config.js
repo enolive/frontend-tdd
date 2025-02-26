@@ -7,11 +7,21 @@ import jestDom from 'eslint-plugin-jest-dom'
 import jsxA11y from 'eslint-plugin-jsx-a11y'
 
 export default tseslint.config(
-  { ignores: ['dist', 'public/mockServiceWorker.js'] },
   {
+    ignores: ['dist', 'public/mockServiceWorker.js'],
+  },
+  {
+    languageOptions: {
+      ecmaVersion: 2022,
+      globals: globals.browser,
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
     extends: [
       js.configs.recommended,
-      ...tseslint.configs.recommended,
+      ...tseslint.configs.recommendedTypeChecked,
       reactPlugin.configs.flat.recommended,
       reactPlugin.configs.flat['jsx-runtime'],
       testingLibrary.configs['flat/react'],
@@ -19,10 +29,6 @@ export default tseslint.config(
       jsxA11y.flatConfigs.recommended,
     ],
     files: ['**/*.{ts,tsx}'],
-    languageOptions: {
-      ecmaVersion: 2020,
-      globals: globals.browser,
-    },
     settings: {
       react: {
         version: 'detect',
@@ -37,6 +43,15 @@ export default tseslint.config(
     rules: {
       // rule does not work with vitest unless you apply globals
       'testing-library/no-manual-cleanup': 'off',
+      // disable rule for jsx attributes
+      '@typescript-eslint/no-misused-promises': [
+        'error',
+        {
+          checksVoidReturn: {
+            attributes: false,
+          },
+        },
+      ],
     },
   }
 )
