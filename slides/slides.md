@@ -31,16 +31,24 @@ I am not an accessibility expert!
 
 ---
 transition: slide-up
+class: fade text-3xl
 ---
 
 # Why Accessibility?
 
+<v-clicks>
+
 * European Accessibility Act (2019)
-* 🇩🇪 BFSG (2026)
+* 🇩🇪 BFSG (June 2025)
 * ~ 15% people have some kind of disabilities
 * demographic change
 * inclusion
 
+</v-clicks>
+
+---
+transition: slide-up
+class: text-2xl
 ---
 
 # In Web Apps
@@ -49,18 +57,32 @@ transition: slide-up
 * **Meaningful** <span v-mark.orange>Alternative Text</span>
 * Color & contrast
 * Keyboard Navigation
+* Responsive Design
 * ...
+
+---
+
+# Did you know?
+
+You can turn on a full-page accessibility tree in chromium based browsers
+
+![Go to the Dev Tools -> Elements -> Accessibilty. Activate the option for the full-page accessibility tree. After a reload you should see an option to toggle between the default DOM view and the accessibility tree represented by a human icon in the right top corner.](/chrome-a11y-tree.png)
+
+<style>
+  img {
+    width: 500px;
+  }
+</style>
 
 ---
 layout: two-cols-header
 transition: slide-up
+class: text-2xl fade
 ---
 
 # Why TDD?
 
 ::left::
-
-<div class="fade">
 
 <v-clicks>
 
@@ -72,17 +94,15 @@ transition: slide-up
 
 </v-clicks>
 
-</div>
-
 ::right::
 
 ![TDD Logo](/tdd-glow.png){width=70%}
 
 ---
+class: text-3xl fade
+---
 
 # How?
-
-<div class="fade">
 
 <v-clicks>
 
@@ -94,18 +114,20 @@ transition: slide-up
 
 </v-clicks>
 
-</div>
-
 ---
 transition: slide-up
+class: text-4xl fade
 ---
 
 # TDD in Frontend
+
+<v-clicks>
 
 * Testing very similar to assistive technologies
 * Tooling highly opinionated towards ARIA roles & attributes
 * [Testing Library](https://testing-library.com/)
 
+</v-clicks>
 
 ---
 layout: fact
@@ -118,45 +140,43 @@ TDD drives the frontend towards basic accessibility!
 
 ---
 transition: slide-up
+class: text-3xl fade
 ---
 
 # Testing Library
 
-<div class="fade">
-
 <v-clicks>
 
 - test components as the user experiences them
-- one of the most popular frontend libs
-- available for most SPA technologies
+- one of the most popular frontend (testing) libs [Source](https://2024.stateofjs.com/en-US/libraries/#tier_list)
+- available for most ui frameworks
 - component testing in JSDOM
-- inspiration for E2E testing with Playwright
+- inspiration for E2E testing with [Playwright](https://playwright.dev/)
 
 </v-clicks>
-
-</div>
 
 ---
 
 # Example
 
-```tsx
-import { render, screen } from '@testing-library/react'
+```tsx{all|4,5,7-}
+import {render, screen} from '@testing-library/react'
 import App from './App'
 
 describe('Todo App', () => {
- it('shows header', () => {
-    render(<App />)
+    it('displays header', () => {
+        render(<App/>)
 
-    const header = screen.getByRole('heading', { level: 1 })
-    expect(header).toHaveTextContent('Todo App')
-  })
+        const header = screen.getByRole('heading', {level: 1})
+        expect(header).toHaveTextContent('Todo App')
+    })
 })
 ```
 
 ---
 layout: two-cols-header
 transition: slide-up
+class: text-3xl
 ---
 
 # Scope of this talk
@@ -194,22 +214,39 @@ scale 2
 </v-click>
 
 ---
+layout: two-cols
+class: text-3xl fade
+---
 
 # Out of scope
-
-<div class="fade">
 
 <v-clicks>
 
 - testable component architecture
-- mocks vs nullables
+- mocks vs [nullables](https://www.jamesshore.com/v2/projects/nullables/testing-without-mocks)
 - E2E Testing
 - further A11y testing
 - fancy CSS
 
 </v-clicks>
 
+::right::
+
+<div v-click v-motion
+  :initial="{ x: -100, y: 1000 }"
+  :enter="{ x: 0, y: 0 }"
+>
+
+![Picture showing a guy with his dog with their faces swapped as a humorous take on just changing a few things in your CSS styles and seeing everything crumbling](/css-fail.png)
+{width=350px}
+
 </div>
+
+<style>
+    .grid-cols-2 {
+        grid-template-columns: 2fr 1fr;
+    }
+</style>
 
 ---
 layout: image
